@@ -50,7 +50,7 @@ def triangle(start, end):
 
     for count in range(3):
     	forward(end.x - start.x)
-    	left(60)
+    	left(120)
 
     end_fill()
 
