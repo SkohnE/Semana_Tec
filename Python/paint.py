@@ -2,11 +2,15 @@
 
 Exercises
 
-1. Add a color.
+1. Add a Color.
 2. Complete circle.
 3. Complete rectangle.
 4. Complete triangle.
-5. Add width parameter.
+
+Authors
+Santiago Kohn
+Luis Antonio Zermeño
+Axel Osvaldo Gonzalez
 
 """
 
