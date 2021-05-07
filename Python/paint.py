@@ -41,7 +41,7 @@ def rectangle(start, end):
     "Draw rectangle from start to end."
     pass  # TODO
 
-def triangle(start, end):
+def triangle(start, end): #make a triangle
     "Draw triangle from start to end."
     up()
     goto(start.x, start.y)
@@ -78,7 +78,7 @@ listen()
 onkey(undo, 'u')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
-onkey(lambda: color('green'), 'G')
+onkey(lambda: color('orange'), 'O')#change color to orange
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: color('yellow'), 'Y')
