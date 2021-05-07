@@ -19,6 +19,7 @@ from freegames import square, vector
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+count = 0
 
 def change(x, y):
     "Change snake direction."
@@ -27,10 +28,11 @@ def change(x, y):
 
 def inside(head):
     "Return True if head inside boundaries."
-    return -200 < head.x < 190 and -200 < head.y < 190
+    return -210 <= head.x <= 190 and -200 <= head.y <= 200 # modify the range 
 
 def move():
     "Move snake forward one segment."
+    global count
     head = snake[-1].copy()
     head.move(aim)
 
@@ -45,9 +47,14 @@ def move():
         print('Snake:', len(snake))
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
+        count = 0
     else:
         snake.pop(0)
 
+    if count == 50: # move the food to random position before 50 moves.
+        food.x = randrange(-15, 15) * 10
+        food.y = randrange(-15, 15) * 10
+        count = 0
     clear()
 
     for body in snake:
@@ -55,7 +62,8 @@ def move():
 
     square(food.x, food.y, 9, 'green')
     update()
-    ontimer(move, 100)
+    count += 1
+    ontimer(move, 100) 
 
 setup(420, 420, 370, 0)
 hideturtle()
