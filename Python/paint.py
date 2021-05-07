@@ -21,7 +21,7 @@ def line(start, end):
     goto(end.x, end.y)
 
 def square(start, end):
-    "Draw square from start to end."
+    "Draw square from start to end."   
     up()
     goto(start.x, start.y)
     down()
@@ -63,9 +63,19 @@ def rectangle(start, end):
     end_fill()
     pass  # TODO
 
-def triangle(start, end):
+def triangle(start, end): #make a triangle
     "Draw triangle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(3):
+    	forward(end.x - start.x)
+    	left(120)
+
+    end_fill()
+
 
 def tap(x, y):
     "Store starting point or draw shape."
@@ -90,7 +100,7 @@ listen()
 onkey(undo, 'u')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
-onkey(lambda: color('green'), 'G')
+onkey(lambda: color('orange'), 'O')#change color to orange
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: color('yellow'), 'Y')
