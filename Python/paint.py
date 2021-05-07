@@ -45,6 +45,7 @@ def rectangle(start, end):
     begin_fill()
 
     for count in range(4):
+        # modify the length of the line if the 
         if (count % 2 == 0):
             forward((end.x-start.x)*1.5)
         else:

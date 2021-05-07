@@ -25,7 +25,7 @@ def change(x, y):
 
 def inside(head):
     "Return True if head inside boundaries."
-    return -210 <= head.x <= 190 and -200 <= head.y <= 200
+    return -210 <= head.x <= 190 and -200 <= head.y <= 200 # modify the range 
 
 def move():
     "Move snake forward one segment."
@@ -48,7 +48,7 @@ def move():
     else:
         snake.pop(0)
 
-    if count == 50:
+    if count == 50: # move the food to random position before 50 moves.
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
         count = 0
@@ -60,7 +60,7 @@ def move():
     square(food.x, food.y, 9, 'green')
     update()
     count += 1
-    ontimer(move, 100)
+    ontimer(move, 100) 
 
 setup(420, 420, 370, 0)
 hideturtle()
