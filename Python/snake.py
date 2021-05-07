@@ -10,6 +10,11 @@ Exercises
 3. How would you move the food?
 4. Change the snake to respond to arrow keys.
 
+Authors
+Santiago Kohn
+Luis Antonio Zermeño
+Axel Osvaldo Gonzalez
+
 """
 
 from turtle import *
